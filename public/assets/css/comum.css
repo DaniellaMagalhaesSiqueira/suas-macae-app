@@ -1,0 +1,10 @@
+* {
+    font-family: 'Average Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Average Sans';
+    font-weight: 400;
+    src: url('./fonts/Oswald-ExtraLight.ttf') format('truetype');
+}
+
