@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="\assets\css\icofont.min.css">
     <link rel="stylesheet" href="\assets\css\template.css">
     
-    <title>In 'n Out</title>
+    <title> --- </title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
                 src="<?= "http://www.gravatar.com/avatar.php?gravatar_id="
                 . md5(strtolower(trim($_SESSION['user']->email))) ?>" alt="user">
                 <span class="ml-3">
-                <?= $_SESSION['user']->name ?>
+                <?= $_SESSION['']->name ?>
                 </span>
                 <i class="icofont-simple-down mx-2"></i>
             </div>
