@@ -1,15 +1,16 @@
 <?php
+ini_set('display_errors',0);
 require_once(dirname(__FILE__, 2). '\\src\\config\\config.php');
-require_once(dirname(__FILE__, 2). '\\src\\models\\Funcionario.php');
+require_once(CONTROLLER_PATH. "\\login.php");
+//loadView('login', ['texto'=>'abc123']); passando parâmetros para a tela
+// require_once(MODEL_PATH."\\Login.php");
 
-// $sql = "SELECT * FROM funcionarios";
-
-// $result = Database::getResultFromQuery($sql);
-// while ($row = $result->fetch_assoc()){
-//   print_r($row);
-//   echo "<br>";
+// $login = new Login (
+//     ['email_funcionario' => 'daniella.siqueira80@gmail.com', 'senha_funcionario' => 'a']
+// );
+// try{
+//     $login->checkLogin();
+//     echo "Deu certo";
+// }catch(Exception $e){
+//     echo "Problemas com o login";
 // }
-
-$func = new Funcionario(['nome_funcionario' => 'coordenador_teste', 'email' => 'coordenador@gmail.com', 'nivel_acesso' => 'C']);
-print_r($func);
-?>

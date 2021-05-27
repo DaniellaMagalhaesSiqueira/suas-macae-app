@@ -1,17 +1,16 @@
 <?php
-loadModel("Login");
-session_start();
-
+loadModel('Login');
 $exception = null;
-if(count($_POST)>0){
+
+ini_set('display_errors', 0);
+if(count($_POST) > 0){
     $login = new Login($_POST);
-    try{    
-        $user = $login->checkLogin();
-        $_SESSION['user'] = $user;
-        header('Location: day_records.php');
+    try{
+        $func = $login->checkLogin(); 
+        echo "Funcionário {$func->nome_funcionario} logado";
     }catch(AppException $e){
         $exception = $e;
     }
 }
-
-loadView("login", $_POST + ['exception' => $exception]);
+//podemos passar parâmetros para a view através de um array no loadView
+loadView('login', $_POST + ['exception'=> $exception]);

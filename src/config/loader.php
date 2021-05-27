@@ -14,17 +14,3 @@ function loadView($viewName, $params = array()){
     }
     require_once(VIEW_PATH."\\{$viewName}.php");
 }
-function loadTemplateView($viewName, $params = array()){
-    if(count($params)>0){
-        foreach($params as $key => $value){
-            // criando uma variável com o nome da string passada na key
-            if(strlen($key)>0){
-                ${$key} = $value;
-            }
-        }
-    }
-}
-
-function renderTitle($title, $subtitle, $icon = null){
-    require_once(TEMPLATE_PATH . "\\title.php");
-}
