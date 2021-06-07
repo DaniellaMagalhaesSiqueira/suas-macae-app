@@ -15,5 +15,11 @@ define ('EXCEPTION_PATH', realpath(dirname(__FILE__).'\\..\\exceptions'));
 //importando arquivos
 require_once(realpath(dirname(__FILE__). "\\database.php"));
 require_once(realpath(dirname(__FILE__). "\\loader.php"));
+require_once(realpath(dirname(__FILE__). "\\session.php"));
+require_once(realpath(dirname(__FILE__). "\\date_utils.php"));
+require_once(realpath(dirname(__FILE__). "\\utils.php"));
 require_once(MODEL_PATH. "\\Model.php");
+require_once(MODEL_PATH. "\\Funcionario.php");
+require_once(MODEL_PATH. "\\Unidade.php");
 require_once(EXCEPTION_PATH. "\\AppException.php");
+require_once(EXCEPTION_PATH. "\\ValidationException.php");

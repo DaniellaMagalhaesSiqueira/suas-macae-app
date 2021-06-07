@@ -94,18 +94,18 @@
 
 -- CREATE TABLE IF NOT EXISTS funcionarios(
 --     id_funcionario INT(6) AUTO_INCREMENT PRIMARY KEY,
---     nome_funcionario VARCHAR (80),
+--     nome_funcionario VARCHAR (80) NOT NULL,
 --     cpf_funcionario VARCHAR (14),
 --     escolaridade_funcionario VARCHAR (20),
 --     data_nascimento_funcionario DATE,
---     email_funcionario VARCHAR (80),
+--     email_funcionario VARCHAR (80) NOT NULL,
 --     senha_funcionario VARCHAR (100),
 --     telefone_funcionario VARCHAR (14),
---     nivel_acesso VARCHAR (20),
+--     nivel_acesso VARCHAR (20) NOT NULL,
 --     profissao VARCHAR (40),
 --     cargo VARCHAR (40),
 --     vinculo VARCHAR (15),
---     unidade_funcionario INT,
+--     unidade_funcionario INT NOT NULL,
 --     ativo_funcionario BOOLEAN NOT NULL DEFAULT true
 --     FOREIGN KEY (unidade_funcionario) REFERENCES unidades (id_unidade)
 -- );
@@ -131,4 +131,4 @@
 -- VALUES (4, "medio", NULL, NULL, NULL, "medio@gmail.com", PASSWORD('a'), NULL, "M", NULL, NULL,
 --     NULL, NULL);
 
-UPDATE funcionarios set senha_funcionario = "*667F407DE7C6AD07358FA38DAED7828A72014B4E" WHERE id_funcionario = 1
+UPDATE funcionarios set senha_funcionario = "$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o." WHERE id_funcionario = 1
