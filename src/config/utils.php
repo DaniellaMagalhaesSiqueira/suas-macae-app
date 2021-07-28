@@ -12,6 +12,7 @@ function addErrorMsg($msg){
         'type' => 'error',
         'message' => $msg
     ];
+<<<<<<< HEAD
 }
 function addWarningMsg($msg){
     $_SESSION['message'] = [
@@ -39,3 +40,6 @@ function criaValorMonetario($valorBanco){
     }
     return strval($valorBanco);
 }
+=======
+}
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f

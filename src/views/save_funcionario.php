@@ -6,6 +6,7 @@
             'icofont-user'
         );
 
+<<<<<<< HEAD
         include(MESSAGES_PATH);
     ?>
 
@@ -13,6 +14,12 @@
         <input type="hidden" name="id_funcionario" value= <?= $id_funcionario ?>>
         <input type="hidden" name="ativo_funcionario" id="" value="<?= $ativo_funcionario ?>">
         <input type="hidden" name="senha_funcionario" id="" value="<?= $senha_funcionario ?>">
+=======
+        include(TEMPLATE_PATH."\\messages.php");
+    ?>
+
+    <form action="#" method="post" class="p-0" onkeydown="return event.key != 'Enter';">
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="nome_funcionario">Nome</label>
@@ -27,7 +34,11 @@
                 <label for="data_nascimento_funcionario">Data de Nascimento</label>
                 <input type="date" id="data_nascimento_funcionario" name="data_nascimento_funcionario" placeholder=""
                     class="form-control <?= $errors['data_nascimento_funcionario'] ? 'is-invalid':''?>"
+<<<<<<< HEAD
                     value="<?= $data_funcionario ?>"
+=======
+                    value="<?= $data_data_funcionario ?>"
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
                     max="<?php echo date('Y-m-d', strtotime('-14 year')); ?>">
                 <div class="invalid-feedback">
                     <?= $errors['data_nascimento_funcionario'] ?>
@@ -93,11 +104,19 @@
             <div class="form-group col-md-3">
                 <label for="unidade_funcionario">Unidade</label>
                 <select name="unidade_funcionario" id="unidade_funcionario" 
+<<<<<<< HEAD
                     class="form-control">
                 <optgroup>
                     <option value="null" selected disabled>Selecione a Unidade</option>
                     <?php foreach($unidades as $unidade):?>
                         <option value="<?= $unidade->id_unidade ?>" <?= $unidade_funcionario === $unidade->id_unidade? 'selected' : '' ?>>
+=======
+                class="form-control" value="<?= $unidade_funcionario ?>">
+                <optgroup>
+                    <option value="null" selected disabled>Selecione a Unidade</option>
+                    <?php foreach($unidades as $unidade):?>
+                        <option value="<?= $unidade->id_unidade ?>">
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
                             <?= $unidade->nome_unidade ?></option>
                             <?php endforeach ?>
                         </optgroup>
@@ -142,11 +161,14 @@
                     <?= $errors['nivel_acesso'] ?>
                 </div>
             </div>
+<<<<<<< HEAD
            
             <?= $ativo_funcionario == 0 ? ' <div class="form-group col-md-4 mt-4 ml-3">
                 <label for="ativo_funcionario" >Reativar Funcionário?</label>
                 <input type="checkbox" name="ativo_funcionario" class="form-check">
             </div>' : ''?>
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         </div>
         <div>
             <button class="btn btn-primary btn-lg">Salvar</button> 

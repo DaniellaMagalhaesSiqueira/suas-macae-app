@@ -1,7 +1,10 @@
 <?php
 date_default_timezone_set("America/Sao_Paulo");
 setlocale(LC_TIME, 'brazil', 'pt-BR.utf-8', 'portuguese-brazilian');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 // setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
 //Constantes gerais
 
@@ -10,7 +13,10 @@ setlocale(LC_TIME, 'brazil', 'pt-BR.utf-8', 'portuguese-brazilian');
 define ('MODEL_PATH', realpath(dirname(__FILE__).'\\..\\models'));
 define ('VIEW_PATH', realpath(dirname(__FILE__).'\\..\\views'));
 define ('TEMPLATE_PATH', realpath(dirname(__FILE__).'\\..\\views\\template'));
+<<<<<<< HEAD
 define ('MESSAGES_PATH', realpath(dirname(__FILE__).'\\..\\views\\template\\messages.php'));
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 define ('CONTROLLER_PATH', realpath(dirname(__FILE__).'\\..\\controllers'));
 define ('EXCEPTION_PATH', realpath(dirname(__FILE__).'\\..\\exceptions'));
 

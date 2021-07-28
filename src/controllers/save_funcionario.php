@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 0);
 session_start();
 requiredValidSession(3);
@@ -41,4 +42,26 @@ elseif(count($_POST)>0){
 loadTemplateView('save_funcionario',
     ['unidades' => $unidades, 'exception'=>$exception] 
     + $funcValues);
+=======
+// ini_set('display_errors', 1);
+session_start();
+requiredValidSession();
+$exception = null;
+$unidades = Unidade::get();
+
+if(count($_POST)>0){
+    try{
+        $func = new Funcionario($_POST);
+        $func->insert();
+        addSuccessMsg('Funcionário Cadastrado com Sucesso. 
+            Lembre-se que a primeira senha é o CPF sem pontos e traço.');
+        $_POST = [];
+
+    }catch(Exception $e){
+        $exception = $e;
+    }
+}
+
+loadTemplateView('save_funcionario', $_POST + ['unidades' => $unidades, 'exception'=>$exception]);
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 

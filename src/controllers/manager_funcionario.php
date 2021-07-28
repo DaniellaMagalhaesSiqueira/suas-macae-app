@@ -1,6 +1,7 @@
 <?php
 ini_set("display_errors", 0);
 session_start();
+<<<<<<< HEAD
 requiredValidSession(3);
 $exception = null;
 
@@ -18,6 +19,12 @@ $user = $_SESSION['user'];
 $unidade = $_SESSION['unidade'];
 $ativos = $user->porNivel();
 
+=======
+requiredValidSession();
+$user = $_SESSION['user'];
+$unidade = $_SESSION['unidade'];
+$ativos = $user->getAtivosNivel();
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 foreach($ativos as $func){
     if($func->data_nascimento_funcionario){
         $func->data_nascimento_funcionario =
@@ -26,4 +33,8 @@ foreach($ativos as $func){
 }
 
 
+<<<<<<< HEAD
 loadTemplateView('manager_funcionario', ['ativos'=>$ativos, 'exception' => $exception]);
+=======
+loadTemplateView('manager_funcionario', ['ativos'=>$ativos]);
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f

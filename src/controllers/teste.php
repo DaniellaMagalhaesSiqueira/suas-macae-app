@@ -2,6 +2,7 @@
 ini_set("display_errors", 1);
 session_start();
 requiredValidSession();
+<<<<<<< HEAD
 loadModel("Visita");
 loadModel("Acompanhamento");
 loadModel("Familia");
@@ -91,4 +92,12 @@ while ($cont < 57){
 
 
 echo "<br>";
+=======
+
+$unidade = $_SESSION['unidade'];
+$user = Funcionario::getOne(['id_funcionario'=> 1]);
+$hash = password_hash('a', PASSWORD_DEFAULT);
+// $user->update();
+echo $hash;
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 echo "Fim";

@@ -30,6 +30,7 @@
                 <td><?= $func->data_nascimento_funcionario ?></td>
                 <td>
                     <a href="save_funcionario.php?update=<?= $func->id_funcionario ?>" 
+<<<<<<< HEAD
                         class="btn text-dark mr-2" title="editar <?= $func->nome_funcionario ?>">
                         <i class="icofont-edit"></i>
                     </a>
@@ -38,6 +39,15 @@
                         <i class='icofont-trash text-dark'></i>
                     </a>" : '' ?>
                     
+=======
+                        class="btn btn-warning text-light rounded-circle mr-2" title="editar <?= $func->nome_funcionario ?>">
+                        <i class="icofont-edit"></i>
+                    </a>
+                    <a href="?update= <?= $func->id_funcionario ?>" onclick="confirmacaoDesligamento()"
+                        class="btn btn-danger rounded-circle" title="desligar <?= $func->nome_funcionario ?>">
+                        <i class="icofont-trash"></i>
+                    </a>
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
                 </td>
             </tr>
             <?php endforeach ?>              

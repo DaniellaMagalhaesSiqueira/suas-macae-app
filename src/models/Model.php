@@ -3,6 +3,7 @@ class Model{
     protected static $tableName = "";
     protected static $columns = [];
     protected $values;
+<<<<<<< HEAD
     
     function __construct($arr, $sanitize = true){
         $this->loadFromArray($arr, $sanitize);     
@@ -36,13 +37,40 @@ class Model{
         return $this->values;
     }
     
+=======
+
+    function __construct($arr){
+        $this->loadFromArray($arr);     
+    }
+// o construtor passará os valores dos campos da tabela por chave e valor
+    public function loadFromArray($arr){
+        if($arr){
+            foreach($arr as $key => $value){
+                $this->$key = $value;
+            }
+        }
+    }
+
+    public function __get($key){
+        return $this->values[$key];
+    }
+
+    public function __set($key, $value){
+        $this->values[$key] = $value;
+    }
+
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     public static function getOne($filters = [], $columns = '*', $op = '='){
         $class = get_called_class();
         $result = static::getResultSetFromSelect($filters,  $columns, $op);
         //retorno o primeiro registro obtido criando um objeto da classe desejada
         return $result ? new $class($result->fetch_assoc()) : null;
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     public static function get($filters = [], $columns = '*', $op="="){
         $objects = [];
         $result = static::getResultSetFromSelect($filters,  $columns, $op);
@@ -54,11 +82,19 @@ class Model{
         }
         return $objects;
     }
+<<<<<<< HEAD
     
     public static function getResultSetFromSelect($filters = [], $columns = '*', $op='='){
         $sql = "SELECT ${columns} FROM "
         . static::$tableName 
         . static::getFilters($filters, $op);
+=======
+
+    public static function getResultSetFromSelect($filters = [], $columns = '*', $op='='){
+        $sql = "SELECT ${columns} FROM "
+            . static::$tableName 
+            . static::getFilters($filters, $op);
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         $result = Database::getResultFromQuery($sql);
         if($result->num_rows == 0){
             return null;
@@ -69,6 +105,7 @@ class Model{
     
     public function insert(){
         $sql = "INSERT INTO " . static::$tableName . " ("
+<<<<<<< HEAD
         . implode(",", static::$columns) . ") VALUES (";
         foreach(static::$columns as $column){
             $sql .= static::getFormatedValue($this->$column) . ",";
@@ -76,6 +113,15 @@ class Model{
         $sql[strlen($sql) - 1] = ')';
         $id = Database::executeSql($sql);
         return $this->id = $id;
+=======
+            . implode(",", static::$columns) . ") VALUES (";
+            foreach(static::$columns as $column){
+                $sql .= static::getFormatedValue($this->$column) . ",";
+            }
+            $sql[strlen($sql) - 1] = ')';
+            $id = Database::executeSql($sql);
+            $this->id = $id;
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     }
     
     public function update(){
@@ -87,6 +133,7 @@ class Model{
         $idColmunName = static::$columns[0];
         $sql .= "WHERE {$idColmunName} = {$this->$idColmunName}";
         Database::executeSql($sql);
+<<<<<<< HEAD
         return $this->id;
     }
     
@@ -576,3 +623,31 @@ class Model{
             return  $count['count'];
         }
     }
+=======
+        
+    }
+
+    private static function getFilters($filters, $op="="){
+        $sql = '';
+        if(count($filters) > 0){
+            //muda nada no sql mas permite a inclusão de um and
+            $sql .= " WHERE 1 = 1";
+            foreach($filters as $column=> $value){
+                $sql .= " AND ${column} {$op} ". static::getFormatedValue($value);
+            }
+        }
+        return $sql;
+    }
+
+
+    private static function getFormatedValue($value){
+        if(is_null($value)){
+            return "null";
+        }elseif(gettype($value) === 'string'){
+            return "'${value}'";
+        }else{
+            return $value;
+        }
+    }
+}
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f

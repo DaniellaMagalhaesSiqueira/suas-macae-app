@@ -7,7 +7,10 @@
         $_SESSION['user']->getNivel(),
         'icofont-checked'
     );
+<<<<<<< HEAD
     include_once(MESSAGES_PATH);
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     ?>
     <div class="card">
         <div class="card-header">
@@ -15,6 +18,7 @@
             <p class="mb-0">Escolha as ações que deseja realizar</p>
         </div>
         <div class="card-body">
+<<<<<<< HEAD
             <div class="container p-3">
             <div class="row ">
                 <div class="col">
@@ -51,6 +55,12 @@
                         <a href="ver_beneficios.php" class="btn btn-primary  btn-block"><i class="icofont-star mr-1 text-light"></i>Ver Benefícios</a>
                     </div>
             </div>
+=======
+            <div class="d-flex justify-content-around">
+                <a href="#" class="btn btn-primary">Gerenciar Famílias</a>
+                <a href="#" class="btn btn-primary">Gerenciar Pessoas</a>
+                <a href="#" class="btn btn-primary">Gerenciar Funcionários</a>
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
             </div>
         </div>
     </div>

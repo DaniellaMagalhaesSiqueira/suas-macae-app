@@ -20,8 +20,11 @@ $alertType = '';
 
 if($message['type'] === 'error'){
     $alertType = 'danger';
+<<<<<<< HEAD
 }elseif($message['type'] === 'warning'){
     $alertType = 'warning';
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 }else{
     $alertType = 'success';
 

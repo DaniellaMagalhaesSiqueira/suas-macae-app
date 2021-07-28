@@ -17,10 +17,14 @@ class Funcionario extends Model {
         'profissao',
         'cargo',
         'vinculo',
+<<<<<<< HEAD
         'unidade_funcionario',
         'ativo_funcionario',
         'data_desligamento_funcionario',
         'desligado_por'
+=======
+        'unidade_funcionario'
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     ];
 
     public static function getAtivosTotal() {
@@ -49,6 +53,7 @@ class Funcionario extends Model {
         }
         return $nivel;
     }
+<<<<<<< HEAD
     
 
     public function porNivel(){
@@ -95,6 +100,18 @@ class Funcionario extends Model {
             }
         }
         return $ativos;
+=======
+
+
+    public function getAtivosNivel() {
+        if($this->nivel_acesso == 5){
+            $funcionarios = static::get(['ativo_funcionario'=>1]);
+        }else{
+            $funcionarios = static::get(['ativo_funcionario'=>1,
+                'nivel_acesso'=>$this->nivel_acesso-1], '*', '<=');
+        }
+        return $funcionarios;
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     }
 
     public function insert(){
@@ -107,6 +124,7 @@ class Funcionario extends Model {
         return parent::insert();
     }
 
+<<<<<<< HEAD
     public function getPrimeiroNome(){
         $nomeTodo = explode(" ",$this->nome_funcionario);
         return $nomeTodo[0];
@@ -114,6 +132,9 @@ class Funcionario extends Model {
 
     private function validate(){
         
+=======
+    private function validate(){
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         $errors = [];
         if(!$this->nome_funcionario){
             $errors ['nome_funcionario'] = 'Nome é um campo obrigatório.';
@@ -136,6 +157,7 @@ class Funcionario extends Model {
             $errors ['email_funcionario'] = 'E-mail é um campo obrigatório.';
         }elseif(!filter_var($this->email_funcionario, FILTER_VALIDATE_EMAIL)){
             $errors ['email_funcionario'] = 'E-mail inválido.';   
+<<<<<<< HEAD
         }elseif($this->email_funcionario){
             $funcs = Funcionario::get();
             foreach($funcs as $func){
@@ -146,17 +168,24 @@ class Funcionario extends Model {
             }
         }
 
+=======
+        }
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         if(!$this->nivel_acesso){
             $errors['nivel_acesso'] = 'Nível de acesso é obrigatório.';
         }elseif(is_string($this->nivel_acesso)){
             $this->nivel_acesso = intval($this->nivel_acesso);
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         if(count($errors)>0){
             throw new ValidationException($errors);
         }
     }
     
+<<<<<<< HEAD
     private function validatePassword($proprio = false){
 
         $errors = [];
@@ -193,16 +222,41 @@ class Funcionario extends Model {
         $errors = [];
         if(!$this->data_desligamento_funcionario){
             $errors['data_desligamento_funcionario'] = 'Insira a data de desligamento.';
+=======
+    private function validatePassword(){
+        $errors = [];
+        
+        if($this->senha_funcionario && $this->confirmacao_senha && 
+        $this->senha_funcionario != $this->confirmacao_senha){
+                $errors ['confirmacao_senha'] = 'As senhas não são iguais.';
+                $errors ['senha_funcionario'] = 'As senhas não são iguais.';
+        }if(!$this->senha_funcionario){
+            $errors['senha_funcionario'] = 'Campo senha obrigatório';
+        }if(!$this->confirmacao_senha){
+            $errors['confirmacao_senha'] = 'Campo confirmação obrigatório.';
+        }
+        if($this->senha_funcionario && $this->confirmacao_senha && $this->senha_funcionario == $this->confirmacao_senha){
+            $this->senha_funcionario = password_hash($this->senha_funcionario, PASSWORD_DEFAULT);
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         }
         if(count($errors) > 0){
             throw new ValidationException($errors);
         }
+<<<<<<< HEAD
         $this->ativo_funcionario = 0;
         return parent::update();
     }
     
     public function update($proprio = false){
         $this->validatePassword($proprio);   
+=======
+        
+        
+    }
+    
+    public function update(){
+        $this->validatePassword();
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         return parent::update();
     }
 

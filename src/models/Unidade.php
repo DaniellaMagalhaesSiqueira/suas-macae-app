@@ -11,6 +11,7 @@ class Unidade extends Model{
         'capacidade_atendimento',
         'data_inauguracao',
         'horario_funcionamento',
+<<<<<<< HEAD
         'bairro_unidade',
         'num_endereco',
         'logradouro',
@@ -43,4 +44,8 @@ class Unidade extends Model{
         $this->validation();
         return parent::update();
     }
+=======
+        'endereco_unidade'
+    ];
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 }

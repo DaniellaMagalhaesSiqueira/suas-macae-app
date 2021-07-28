@@ -30,7 +30,11 @@
 
 -- CREATE TABLE IF NOT EXISTS familias (
 --     id_familia INT (6) AUTO_INCREMENT PRIMARY KEY,
+<<<<<<< HEAD
 --     data_inclusao DATE NOT NULL,
+=======
+--     data_entrada DATE NOT NULL,
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
 --     ativo_familia BOOLEAN NOT NULL DEFAULT true,
 --     data_desligamento DATE,
 --     motivo_desligamento VARCHAR (100),

@@ -39,9 +39,12 @@
                     <?= $errors['senha_funcionario']?>
                 </div>
             </div>
+<<<<<<< HEAD
             <!-- <div>
                 <a href="#" class="">Esqueci minha senha</a>
             </div> -->
+=======
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
         </div>
         <div class="card-footer">
             <button class="btn btn-lg btn-primary">Entrar</button>

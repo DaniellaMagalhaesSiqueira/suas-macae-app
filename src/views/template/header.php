@@ -1,13 +1,25 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
     <html lang="pt-br">
     <head>
  
     <meta charset="utf-8">
+=======
+<html lang="en">
+    <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="\assets\js\jquery.min.js"></script>
     <script src="\assets\js\jquery.mask.min.js"></script>
+<<<<<<< HEAD
     <script src="\assets\js\bootstrap.min.js" ></script>
+=======
+    <script src="\assets\js\bootstrap.min.js"></script>
+>>>>>>> 396e841a7fb422ccc9ad32fddea073ce75c4e97f
     <link rel="stylesheet" href="\assets\css\inter.css">
     <link rel="stylesheet" href="\assets\css\bootstrap.min.css">
     <link rel="stylesheet" href="\assets\css\icofont.min.css">
