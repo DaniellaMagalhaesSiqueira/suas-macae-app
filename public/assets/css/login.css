@@ -1,0 +1,24 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ddd; */
+    background-image: url(../images/cras_grande.png);
+   
+}
+
+.form-login {
+    flex-basis: 450px;
+}
+.login-card .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.login-card .card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
