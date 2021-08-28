@@ -13,21 +13,24 @@ Seguem algumas telas do protótipo disponibilizado no período de 29 de junho de
 
 A tela de login já conta com sistema de verificação de senha de um usuário mestre inserido previamente no banco de dados que irá inserir outros usuários do sistema que dependendo do seu nível de acesso podem inserir outros usuários. O sistema já cria a primeira senha com o CPF do usuário criado e o direciona em seu primeiro login à tela de edição de senha de usuário.
 
-<img src="D:\PROJETOS\CRAS\public\assets\images\editar_usuario.png" style="zoom:25%;" />
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/editar_usuario.png"zoom:25%;" />
 
 Passando o mouse pelo nome de usuário no canto superior direito temos um menu dropdown para deslogar e para editar a senha. Outras informações do usuário apenas o usuário com nível de acesso correto poderá alterar.
-
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/usuario_dropdown.png"/>
 Home:
 
-<img src="D:\PROJETOS\CRAS\public\assets\images\home.png" style="zoom:25%;" />
+
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/home.png" style="zoom:25%;" />
 
 Alguns menus dropdown:
 
-![](D:\PROJETOS\CRAS\public\assets\images\familia_dropdown.png)
-
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/familia_dropdown.png"/>
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/pessoa_dropdown.png"/>
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/tecnico_dropdown.png"/>
+<img src="<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/tecnico_dropdown.png"/>"/>
 Formulário de inclusão de família:
-
-
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/form_familia1.png"/>
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/form_familia2.png"/>
 
 O sistema já tem um banco de dados criado na pasta extras. Esse banco de dados foi idealizado conforme as solicitações de profissionais da assistência e necessidades de captação de dados específicos.
 
