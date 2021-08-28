@@ -13,7 +13,7 @@ Seguem algumas telas do protótipo disponibilizado no período de 29 de junho de
 
 A tela de login já conta com sistema de verificação de senha de um usuário mestre inserido previamente no banco de dados que irá inserir outros usuários do sistema que dependendo do seu nível de acesso podem inserir outros usuários. O sistema já cria a primeira senha com o CPF do usuário criado e o direciona em seu primeiro login à tela de edição de senha de usuário.
 
-<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/editar_usuario.png"zoom:25%;" />
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/editar_usuario.png" style=zoom:25%;" />
 
 Passando o mouse pelo nome de usuário no canto superior direito temos um menu dropdown para deslogar e para editar a senha. Outras informações do usuário apenas o usuário com nível de acesso correto poderá alterar.
 <img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/usuario_dropdown.png"/>
