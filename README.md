@@ -9,7 +9,7 @@ O sistema foi iniciado em outro repositório com objetivo de estudo na linguagem
 
 Seguem algumas telas do protótipo disponibilizado no período de 29 de junho de 2021 a 02 de setembro de 2021 para teste do referido município.
 
-<img src="D:\PROJETOS\CRAS\public\assets\images\tela_login_cras.png" style="zoom:25%;" />
+<img src="suas-macae-app/public/assets/images/tela_login_cras.png" style="zoom:25%;" />
 
 A tela de login já conta com sistema de verificação de senha de um usuário mestre inserido previamente no banco de dados que irá inserir outros usuários do sistema que dependendo do seu nível de acesso podem inserir outros usuários. O sistema já cria a primeira senha com o CPF do usuário criado e o direciona em seu primeiro login à tela de edição de senha de usuário.
 
