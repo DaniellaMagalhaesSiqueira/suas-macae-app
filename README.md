@@ -27,7 +27,7 @@ Alguns menus dropdown:
 <img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/familia_dropdown.png"/>
 <img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/pessoa_dropdown.png"/>
 <img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/tecnico_dropdown.png"/>
-<img src="<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/tecnico_dropdown.png"/>
+<img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/vd_dropdown.png"/>
 Formulário de inclusão de família:
 <img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/form_familia1.png"/>
 <img src="https://github.com/DaniellaMagalhaesSiqueira/suas-macae-app/blob/master/public/assets/images/form_familia2.png"/>
